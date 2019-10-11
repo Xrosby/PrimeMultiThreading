@@ -19,6 +19,10 @@ public class Primes
         ArrayList<Thread> threads = new ArrayList<>();
 
         int division = max / noOfThreads;
+
+
+
+
         for (int i = 1; i <= noOfThreads; i++)
         {
             int threadMin = (i * division) - (division);
@@ -30,14 +34,17 @@ public class Primes
                 @Override
                 public void run()
                 {
-                    System.out.println("Starting thread " + getName());
-                    System.out.println("Working from: " + threadMin + " to " + threadMax);
+                    //System.out.println("Starting thread " + getName());
+                    //System.out.println("Working from: " + threadMin + " to " + threadMax);
                     startPrimeThread(threadMin, threadMax);
                 }
             };
+
             thread.start();
             threads.add(thread);
         }
+
+
         for (Thread thread : threads)
         {
             thread.join();
@@ -60,7 +67,7 @@ public class Primes
                     this.primes.add(i);
                 }
                 if(primes.size() % 1000 == 0) {
-                    System.out.println(primes.size());
+                   // System.out.println(primes.size());
                 }
             }
 

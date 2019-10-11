@@ -14,9 +14,9 @@ public class Main {
 	    Primes primeCalc = new Primes();
 
 
-        int maxThreads = 8;
+        int maxThreads = 2;
         for(int i = 1; i <= maxThreads; i++) {
-            System.out.println("\n_________________________________STARTING WITH " + i + " THREADS_______________________________________\n ");
+            //System.out.println("\n_________________________________STARTING WITH " + i + " THREADS_______________________________________\n ");
             try
             {
                 primeCalc.calculatePrimes(i);
@@ -26,9 +26,9 @@ public class Main {
             }
            // System.out.println(primeCalc.getPrimes());
 
-            System.out.println("PRIMES: " + primeCalc.getPrimes());
-            System.out.println("\n_____________________FINISHED IN " + primeCalc.getTimeString() + " WITH " + i + " THREADS___________________\n\n" +
-                    "########################################################################\n\n");
+           // System.out.println("PRIMES: " + primeCalc.getPrimes());
+            //System.out.println("\n_____________________FINISHED IN " + primeCalc.getTimeString() + " WITH " + i + " THREADS___________________\n\n" +
+              //      "########################################################################\n\n");
             noOfThreadsAndRunTime.put(i, primeCalc.getRunTime());
         }
 
